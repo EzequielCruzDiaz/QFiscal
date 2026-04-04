@@ -41,8 +41,7 @@ export default function RegisterPage() {
     <main className="flex min-h-screen items-center justify-center bg-gray-950 px-4">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <span className="text-3xl font-bold text-blue-500">ContaBot</span>
-          <p className="mt-2 text-sm text-gray-400">Contabilidad con IA para RD</p>
+          <span className="text-3xl font-bold text-blue-500">ContabRD</span>
         </div>
 
         <div className="rounded-2xl border border-gray-800 bg-gray-900 p-8">

@@ -21,10 +21,12 @@ CREATE TABLE profiles (
 );
 
 -- Trigger: crear perfil automáticamente al registrar usuario
-CREATE OR REPLACE FUNCTION handle_new_user()
-RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER AS $$
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER
+SET search_path = public
+AS $$
 BEGIN
-  INSERT INTO profiles (id) VALUES (new.id);
+  INSERT INTO public.profiles (id) VALUES (new.id);
   RETURN new;
 END;
 $$;

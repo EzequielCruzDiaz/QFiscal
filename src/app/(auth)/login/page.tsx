@@ -20,7 +20,10 @@ export default function LoginPage() {
     setLoading(true);
 
     const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
     if (error) {
       setError("Correo o contraseña incorrectos");
@@ -37,12 +40,14 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="mb-8 text-center">
-          <span className="text-3xl font-bold text-blue-500">ContaBot</span>
-          <p className="mt-2 text-sm text-gray-400">Contabilidad con IA para RD</p>
+          <span className="text-3xl font-bold text-blue-500">ContabRD</span>
+          <p className="mt-2 text-sm text-gray-400"></p>
         </div>
 
         <div className="rounded-2xl border border-gray-800 bg-gray-900 p-8">
-          <h1 className="mb-6 text-xl font-semibold text-white">Iniciar sesión</h1>
+          <h1 className="mb-6 text-xl font-semibold text-white">
+            Iniciar sesión
+          </h1>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
@@ -70,11 +75,7 @@ export default function LoginPage() {
               </p>
             )}
 
-            <Button
-              type="submit"
-              disabled={loading}
-              className="w-full"
-            >
+            <Button type="submit" disabled={loading} className="w-full">
               {loading ? "Entrando..." : "Entrar"}
             </Button>
           </form>
