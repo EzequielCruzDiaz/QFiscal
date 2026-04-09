@@ -1,4 +1,6 @@
 import Sidebar from "@/components/dashboard/Sidebar";
+import Topbar from "@/components/dashboard/Topbar";
+import SessionGuard from "@/components/dashboard/SessionGuard";
 
 export default function DashboardLayout({
   children,
@@ -6,9 +8,16 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen bg-gray-950">
-      <Sidebar />
-      <main className="flex-1 overflow-y-auto p-8">{children}</main>
-    </div>
+    <SessionGuard>
+      <div className="flex min-h-screen bg-surface">
+        <Sidebar />
+        <div className="ml-72 flex-1 flex flex-col min-h-screen">
+          <Topbar />
+          <main className="flex-1">
+            <div className="dashboard-content">{children}</div>
+          </main>
+        </div>
+      </div>
+    </SessionGuard>
   );
 }

@@ -83,11 +83,18 @@ async function claudeChat(
       "Content-Type": "application/json",
       "x-api-key": process.env.ANTHROPIC_API_KEY!,
       "anthropic-version": "2023-06-01",
+      "anthropic-beta": "prompt-caching-2024-07-31",
     },
     body: JSON.stringify({
       model: "claude-sonnet-4-6",
       max_tokens: 1000,
-      system: systemPrompt,
+      system: [
+        {
+          type: "text",
+          text: systemPrompt,
+          cache_control: { type: "ephemeral" },
+        },
+      ],
       messages,
     }),
   });
@@ -106,6 +113,7 @@ async function claudeVision(
       "Content-Type": "application/json",
       "x-api-key": process.env.ANTHROPIC_API_KEY!,
       "anthropic-version": "2023-06-01",
+      "anthropic-beta": "prompt-caching-2024-07-31",
     },
     body: JSON.stringify({
       model: "claude-sonnet-4-6",

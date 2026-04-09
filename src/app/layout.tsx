@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "ContaBot — Contabilidad Moderna",
-  description: "Gestiona tus facturas, NCF e ITBIS.",
+  title: "QFiscal — Contabilidad Moderna para RD",
+  description: "Gestiona tus facturas, NCF e ITBIS con inteligencia artificial. Hecho para la República Dominicana.",
 };
 
 export default function RootLayout({
@@ -25,9 +29,9 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-gray-50 text-gray-900">{children}</body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }

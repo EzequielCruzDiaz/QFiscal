@@ -2,25 +2,23 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 
 /**
- * Handles the PKCE code exchange after Supabase sends an auth email link.
- * Used by: password reset, email confirmation, magic links.
- *
- * Supabase appends ?code=...&next=... to this URL in the email.
- * We exchange the code for a session, then redirect to `next`.
+ * Dedicated callback for password-recovery emails.
+ * Supabase replaces the entire query string with ?code=xxx when redirecting,
+ * so we cannot rely on a custom ?next= param surviving.
+ * This route is exclusively used by resetPasswordForEmail, so it always
+ * redirects to /reset-password after the PKCE code exchange.
  */
 export async function GET(req: NextRequest) {
   const { searchParams, origin } = new URL(req.url);
   const code = searchParams.get("code");
-  const next = searchParams.get("next") ?? "/dashboard";
 
   if (code) {
     const supabase = await createClient();
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     if (!error) {
-      return NextResponse.redirect(`${origin}${next}`);
+      return NextResponse.redirect(`${origin}/reset-password`);
     }
   }
 
-  // Something went wrong — send user back to login with an error hint
   return NextResponse.redirect(`${origin}/login?error=link_expired`);
 }

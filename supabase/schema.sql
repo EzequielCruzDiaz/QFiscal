@@ -1,5 +1,5 @@
 -- ============================================================
--- ContaBot – Esquema de base de datos
+-- ContabRD – Esquema de base de datos
 -- República Dominicana – DGII compliance
 -- ============================================================
 
@@ -7,6 +7,10 @@ CREATE TABLE empresas (
   id               uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   nombre           text NOT NULL,
   rnc              text,
+  tipo             text CHECK (tipo IN ('fisica', 'juridica')),
+  direccion        text,
+  mes_inicio       integer DEFAULT 1 CHECK (mes_inicio BETWEEN 1 AND 12),
+  moneda           text DEFAULT 'DOP' CHECK (moneda IN ('DOP', 'USD')),
   plan             text DEFAULT 'basico' CHECK (plan IN ('basico', 'pro', 'enterprise')),
   facturas_limite  integer DEFAULT 100,
   created_at       timestamptz DEFAULT now()

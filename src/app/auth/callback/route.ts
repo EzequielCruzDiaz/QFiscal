@@ -5,7 +5,7 @@ import { createClient } from "@/lib/supabase/server";
  * Handles the PKCE code exchange after Supabase sends an auth email link.
  * Used by: password reset, email confirmation, magic links.
  *
- * Supabase appends ?code=...&next=... to this URL in the email.
+ * Supabase appends ?code=...&next=/reset-password to this URL in the email.
  * We exchange the code for a session, then redirect to `next`.
  */
 export async function GET(req: NextRequest) {
@@ -21,6 +21,6 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  // Something went wrong — send user back to login with an error hint
+  // Something went wrong — send user back to login
   return NextResponse.redirect(`${origin}/login?error=link_expired`);
 }
