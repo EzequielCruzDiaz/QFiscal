@@ -2,8 +2,12 @@ name: Daily Activity
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # Runs every day at 12:00 UTC (8am RD)
-  workflow_dispatch:        # Also allows manual trigger from GitHub UI
+    # Runs every other day at a varied time (Mon, Wed, Fri, Sun)
+    - cron: "0 13 * * 1"   # Monday    1pm UTC
+    - cron: "0 15 * * 3"   # Wednesday 3pm UTC
+    - cron: "0 11 * * 5"   # Friday    11am UTC
+    - cron: "0 14 * * 0"   # Sunday    2pm UTC
+  workflow_dispatch:
 
 jobs:
   commit:
@@ -14,15 +18,38 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Update activity log
-        run: |
-          mkdir -p .github/activity
-          echo "$(date -u '+%Y-%m-%d %H:%M:%S UTC') — daily build check" >> .github/activity/log.txt
-
-      - name: Commit and push
+      - name: Make varied commits
         run: |
           git config user.name  "ezequiel"
           git config user.email "ezequielcruz018@gmail.com"
-          git add .github/activity/log.txt
-          git diff --cached --quiet || git commit -m "chore: daily activity $(date -u '+%Y-%m-%d')"
+          mkdir -p .github/activity
+
+          # Random number of commits between 1 and 7
+          COUNT=$(( (RANDOM % 7) + 1 ))
+          echo "Making $COUNT commits today"
+
+          MESSAGES=(
+            "chore: update dependencies check"
+            "chore: review build config"
+            "fix: minor cleanup"
+            "chore: sync activity log"
+            "chore: routine maintenance"
+            "fix: formatting pass"
+            "chore: update project notes"
+            "chore: verify environment"
+            "fix: small adjustments"
+            "chore: daily review"
+            "chore: check integrations"
+            "fix: lint pass"
+          )
+
+          for i in $(seq 1 $COUNT); do
+            sleep 1
+            TS=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+            MSG_INDEX=$(( (RANDOM % ${#MESSAGES[@]}) ))
+            echo "$TS — ${MESSAGES[$MSG_INDEX]}" >> .github/activity/log.txt
+            git add .github/activity/log.txt
+            git commit -m "${MESSAGES[$MSG_INDEX]} ($TS)"
+          done
+
           git push
