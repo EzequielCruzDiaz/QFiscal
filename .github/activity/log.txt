@@ -46,3 +46,4 @@
 2026-07-01 12:01:37 UTC — chore: update changelog
 2026-07-01 12:01:39 UTC — chore: check integrations
 2026-07-03 14:46:57 UTC — fix: cleanup unused vars
+2026-07-03 14:46:59 UTC — fix: small adjustments
