@@ -74,3 +74,4 @@
 2026-07-11 12:23:52 UTC — fix: minor refactor
 2026-07-13 13:41:24 UTC — fix: lint pass
 2026-07-13 13:41:26 UTC — fix: cleanup unused vars
+2026-07-13 13:41:28 UTC — chore: update project notes
