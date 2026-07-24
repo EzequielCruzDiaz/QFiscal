@@ -118,3 +118,4 @@
 2026-07-22 11:35:03 UTC — fix: minor refactor
 2026-07-22 11:35:05 UTC — chore: update project notes
 2026-07-24 14:35:20 UTC — chore: review build config
+2026-07-24 14:35:22 UTC — fix: cleanup unused vars
