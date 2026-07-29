@@ -144,3 +144,4 @@
 2026-07-29 11:44:04 UTC — chore: build verification
 2026-07-29 11:44:06 UTC — fix: minor cleanup
 2026-07-29 11:44:08 UTC — fix: formatting pass
+2026-07-29 11:44:10 UTC — chore: update changelog
