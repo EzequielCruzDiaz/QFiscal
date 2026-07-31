@@ -151,3 +151,4 @@
 2026-07-31 14:49:15 UTC — fix: code style
 2026-07-31 14:49:17 UTC — chore: sync activity log
 2026-07-31 14:49:19 UTC — chore: build verification
+2026-07-31 14:49:21 UTC — chore: review build config
