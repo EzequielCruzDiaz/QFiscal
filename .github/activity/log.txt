@@ -181,3 +181,4 @@
 2026-08-07 14:22:42 UTC — chore: check integrations
 2026-08-07 14:22:44 UTC — chore: dependency audit
 2026-08-07 14:22:46 UTC — fix: lint pass
+2026-08-08 12:11:42 UTC — chore: review build config
