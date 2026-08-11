@@ -192,3 +192,4 @@
 2026-08-10 13:29:56 UTC — fix: formatting pass
 2026-08-10 13:29:58 UTC — fix: lint pass
 2026-08-10 13:30:00 UTC — chore: update changelog
+2026-08-11 15:21:19 UTC — chore: dependency audit
