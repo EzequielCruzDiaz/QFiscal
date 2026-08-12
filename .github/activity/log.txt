@@ -207,3 +207,4 @@
 2026-08-12 11:41:36 UTC — chore: review build config
 2026-08-12 11:41:38 UTC — chore: dependency audit
 2026-08-12 11:41:40 UTC — fix: lint pass
+2026-08-12 11:41:42 UTC — fix: minor cleanup
