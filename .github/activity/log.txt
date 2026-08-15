@@ -217,3 +217,4 @@
 2026-08-14 14:46:48 UTC — chore: dependency audit
 2026-08-15 12:41:29 UTC — fix: small adjustments
 2026-08-15 12:41:31 UTC — chore: review build config
+2026-08-15 12:41:33 UTC — fix: cleanup unused vars
