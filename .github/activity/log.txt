@@ -229,3 +229,4 @@
 2026-08-18 15:25:27 UTC — chore: build verification
 2026-08-19 11:18:55 UTC — fix: formatting pass
 2026-08-19 11:18:57 UTC — chore: verify environment
+2026-08-21 14:29:56 UTC — fix: cleanup unused vars
