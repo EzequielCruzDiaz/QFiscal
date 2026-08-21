@@ -232,3 +232,4 @@
 2026-08-21 14:29:56 UTC — fix: cleanup unused vars
 2026-08-21 14:29:58 UTC — fix: lint pass
 2026-08-21 14:30:00 UTC — chore: build verification
+2026-08-21 14:30:02 UTC — fix: minor cleanup
