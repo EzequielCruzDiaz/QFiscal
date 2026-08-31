@@ -264,3 +264,4 @@
 2026-08-29 16:24:45 UTC — chore: verify environment
 2026-08-29 16:24:47 UTC — chore: update changelog
 2026-08-29 16:24:49 UTC — chore: update changelog
+2026-08-31 19:20:48 UTC — chore: dependency audit
