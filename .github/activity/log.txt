@@ -265,3 +265,4 @@
 2026-08-29 16:24:47 UTC — chore: update changelog
 2026-08-29 16:24:49 UTC — chore: update changelog
 2026-08-31 19:20:48 UTC — chore: dependency audit
+2026-08-31 19:20:50 UTC — fix: minor refactor
