@@ -270,3 +270,4 @@
 2026-08-31 19:20:54 UTC — fix: code style
 2026-09-01 18:05:55 UTC — chore: update changelog
 2026-09-01 18:05:57 UTC — fix: minor refactor
+2026-09-01 18:05:59 UTC — fix: small adjustments
