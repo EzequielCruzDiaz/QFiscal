@@ -284,3 +284,4 @@
 2026-09-04 17:20:52 UTC — fix: lint pass
 2026-09-04 17:20:54 UTC — chore: routine maintenance
 2026-09-04 17:20:56 UTC — fix: formatting pass
+2026-09-05 14:48:59 UTC — chore: dependency audit
