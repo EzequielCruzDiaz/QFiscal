@@ -322,3 +322,4 @@
 2026-09-14 18:18:43 UTC — fix: code style
 2026-09-14 18:18:45 UTC — chore: dependency audit
 2026-09-14 18:18:47 UTC — chore: update changelog
+2026-09-14 18:18:49 UTC — fix: cleanup unused vars
