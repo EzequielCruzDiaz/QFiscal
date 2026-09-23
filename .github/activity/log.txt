@@ -350,3 +350,4 @@
 2026-09-22 18:27:11 UTC — fix: small adjustments
 2026-09-23 15:14:58 UTC — fix: cleanup unused vars
 2026-09-23 15:15:00 UTC — chore: update changelog
+2026-09-23 15:15:02 UTC — fix: lint pass
