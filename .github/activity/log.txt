@@ -430,3 +430,4 @@
 2026-10-16 17:47:08 UTC — fix: code style
 2026-10-17 15:12:23 UTC — fix: minor refactor
 2026-10-17 15:12:25 UTC — chore: update changelog
+2026-10-17 15:12:27 UTC — chore: verify environment
