@@ -435,3 +435,4 @@
 2026-10-17 15:12:31 UTC — chore: check integrations
 2026-10-17 15:12:33 UTC — chore: dependency audit
 2026-10-19 18:56:49 UTC — fix: formatting pass
+2026-10-19 18:56:51 UTC — chore: review build config
