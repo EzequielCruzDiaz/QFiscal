@@ -540,3 +540,4 @@
 2026-11-13 20:44:15 UTC — chore: update changelog
 2026-11-13 20:44:17 UTC — chore: update dependencies check
 2026-11-13 20:44:19 UTC — chore: update changelog
+2026-11-13 20:44:21 UTC — fix: cleanup unused vars
