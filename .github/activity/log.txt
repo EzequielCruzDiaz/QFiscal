@@ -583,3 +583,4 @@
 2026-11-24 23:43:20 UTC — chore: update dependencies check
 2026-11-24 23:43:22 UTC — chore: update dependencies check
 2026-11-24 23:43:24 UTC — fix: code style
+2026-11-24 23:43:26 UTC — chore: review build config
