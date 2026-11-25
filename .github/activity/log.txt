@@ -585,3 +585,4 @@
 2026-11-24 23:43:24 UTC — fix: code style
 2026-11-24 23:43:26 UTC — chore: review build config
 2026-11-25 20:19:34 UTC — chore: dependency audit
+2026-11-25 20:19:36 UTC — fix: formatting pass
