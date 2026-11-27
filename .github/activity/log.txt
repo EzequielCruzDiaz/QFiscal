@@ -587,3 +587,4 @@
 2026-11-25 20:19:34 UTC — chore: dependency audit
 2026-11-25 20:19:36 UTC — fix: formatting pass
 2026-11-25 20:19:38 UTC — chore: daily review
+2026-11-27 22:27:39 UTC — chore: update changelog
