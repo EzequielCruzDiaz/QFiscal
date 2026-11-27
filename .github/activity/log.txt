@@ -592,3 +592,4 @@
 2026-11-27 22:27:43 UTC — fix: code style
 2026-11-27 22:27:45 UTC — fix: minor cleanup
 2026-11-27 22:27:47 UTC — fix: small adjustments
+2026-11-27 22:27:49 UTC — fix: cleanup unused vars
